@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import teamData, { TeamMember } from "../../lib/teamData";
+import resolveLocalImage from './imageMap';
 
 const TRANSPARENT_GIF =
 	"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
@@ -29,10 +30,15 @@ export default function TeamSection() {
 				const key = m.image;
 				// Skip if already loaded
 				if (resolvedImages[key]) continue;
+				// Try static resolver first (handles casing/format differences)
+				const resolved = resolveLocalImage(key);
+				if (resolved) {
+					if (mounted) setResolvedImages((s) => ({ ...s, [key]: resolved }));
+					continue;
+				}
 				try {
-					// dynamic import from the same folder as this component
+					// dynamic import from the same folder as this component (fallback)
 					const mod: any = await import(`./${key}`);
-					// mod may export an object (StaticImageData) or a string
 					const url = mod?.default?.src ?? mod?.src ?? mod?.default ?? mod;
 					const finalUrl = typeof url === "string" ? url : url?.src ?? url;
 					if (mounted) setResolvedImages((s) => ({ ...s, [key]: finalUrl }));

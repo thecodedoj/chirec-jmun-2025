@@ -5,44 +5,32 @@ import AnimatedSection from "../../components/ui/AnimatedSection";
 
 const faqs = [
   {
-    q: "How do I register for CHIREC JMUN 2025?",
-    a: "To register, click the 'Register Now' button on our website. Fill out the registration form with your details. Registration confirmations will be sent via email once your application is processed.",
-  },
-  {
-    q: "What are the dates for CHIREC JMUN?",
-  a: "CHIREC JMUN 2025 will take place on November 1st and 2nd, 2025, at CHIREC International School, Kondapur campus.",
-  },
-  {
-    q: "Do I need prior MUN experience to participate?",
-    a: "No prior experience is necessary! CHIREC JMUN welcomes delegates of all experience levels. We provide resources and training to help first-time delegates prepare.",
-  },
-  {
-    q: "What committees will be available?",
-    a: "CHIREC JMUN features 6+ diverse committees covering a range of global issues. Detailed committee information will be shared with registered delegates.",
-  },
-  {
-    q: "What is the dress code for the conference?",
-    a: "Delegates are expected to dress in formal business attire (suits, blazers, formal trousers/skirts, dress shoes). This reflects the professionalism of actual UN proceedings.",
-  },
-  {
-    q: "Will food be provided during the conference?",
-    a: "Yes, meals and refreshments will be provided throughout both days of the conference, including lunch and snacks during committee breaks.",
-  },
-  {
-    q: "Can I attend only one day of the conference?",
-    a: "The conference is designed as a two-day experience. Both days are essential for completing committee proceedings and resolutions. Full attendance is required.",
+    q: "How should I prepare for the conference?",
+    a: "Begin by thoroughly researching your country's stance on the agenda and understanding the broader global issue. Read articles, UN reports, and past resolutions to learn what actions have already been taken. Prepare clear arguments, examples, and solutions that align with your country's interests. It also helps to anticipate counterpoints from other nations and think of diplomatic ways to respond.",
   },
   {
     q: "What should I bring to the conference?",
-    a: "Bring formal attire, notebook and pens for note-taking, your country placard (provided), position papers (if required), and any committee-specific materials mentioned in your preparation guides.",
+    a: "Bring your research notes, pens, and any printed documents or data you may want to refer to. Having all your materials ready helps you stay organized and confident during committee sessions. Placards, ID cards, and notebooks will be provided at the venue.",
   },
   {
-    q: "How can I prepare for my committee?",
-    a: "Registered delegates will receive a study guide with their committee topic, country allocation, and research resources. We recommend reading about your assigned country's positions and the committee's agenda.",
+    q: "Where and when is the event taking place?",
+    a: "The event will be held at CHIREC International School, Kondapur, on the 1st and 2nd of November.",
   },
   {
-    q: "Is transportation provided?",
-    a: "No, delegates must arrange their own transportation to and from the venue at CHIREC International School.",
+    q: "Is transport provided?",
+    a: "Transport will be provided free of cost on Day 1. Please note that no transport will be available on Day 2.",
+  },
+  {
+    q: "Are there on-spot registrations?",
+    a: "No, there will be no on-spot registrations. All participants must register beforehand.",
+  },
+  {
+    q: "What is the dress code for the conference?",
+    a: "Day 1: Business Formals\n\nDay 2: Traditional Attire",
+  },
+  {
+    q: "Will there be socials?",
+    a: "Yes, there will be socials on Day 1 from 4:30 p.m. to 6:00 p.m.",
   },
 ];
 
