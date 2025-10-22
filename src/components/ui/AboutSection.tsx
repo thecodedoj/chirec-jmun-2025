@@ -101,19 +101,19 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
       style={{ minHeight: "60vh" }}
     >
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute left-4 md:left-10 top-1/4 w-20 md:w-32 h-20 md:h-32 bg-sky-400/5 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute left-8 md:left-20 top-1/2 w-10 md:w-16 h-10 md:h-16 bg-white/3 rounded-lg rotate-45 animate-float"></div>
-        <div className="absolute left-2 md:left-5 bottom-1/3 w-14 md:w-24 h-14 md:h-24 bg-sky-300/8 rounded-full blur-lg"></div>
+        <div className="absolute left-4 md:left-10 top-1/4 w-20 md:w-32 h-20 md:h-32 bg-sky-400/06 rounded-full" style={{ opacity: 0.6 }} />
+        <div className="absolute left-8 md:left-20 top-1/2 w-10 md:w-16 h-10 md:h-16 bg-white/03 rounded-lg" />
+        <div className="absolute left-2 md:left-5 bottom-1/3 w-14 md:w-24 h-14 md:h-24 bg-sky-300/06 rounded-full" />
 
-        <div className="absolute right-4 md:right-10 top-1/3 w-16 md:w-28 h-16 md:h-28 bg-sky-400/6 rounded-full blur-xl animate-pulse [animation-delay:1s]"></div>
-        <div className="absolute right-8 md:right-16 bottom-1/4 w-12 md:w-20 h-12 md:h-20 bg-white/4 rounded-lg rotate-12 animate-float [animation-delay:2s]"></div>
-        <div className="absolute right-2 md:right-8 top-2/3 w-8 md:w-12 h-8 md:h-12 bg-sky-200/5 rounded-full blur-md"></div>
+        <div className="absolute right-4 md:right-10 top-1/3 w-16 md:w-28 h-16 md:h-28 bg-sky-400/06 rounded-full" style={{ opacity: 0.5 }} />
+        <div className="absolute right-8 md:right-16 bottom-1/4 w-12 md:w-20 h-12 md:h-20 bg-white/04 rounded-lg" />
+        <div className="absolute right-2 md:right-8 top-2/3 w-8 md:w-12 h-8 md:h-12 bg-sky-200/05 rounded-full" />
 
-        <div className="absolute top-4 md:top-10 left-1/3 w-4 md:w-6 h-4 md:h-6 bg-sky-400/10 rounded-full animate-ping [animation-delay:3s]"></div>
-        <div className="absolute top-8 md:top-16 right-1/3 w-3 md:w-4 h-3 md:h-4 bg-white/6 rounded-full animate-bounce [animation-delay:1.5s]"></div>
+        <div className="absolute top-4 md:top-10 left-1/3 w-4 md:w-6 h-4 md:h-6 bg-sky-400/06 rounded-full" />
+        <div className="absolute top-8 md:top-16 right-1/3 w-3 md:w-4 h-3 md:h-4 bg-white/06 rounded-full" />
 
-        <div className="absolute bottom-6 md:bottom-12 left-1/4 w-5 md:w-8 h-5 md:h-8 bg-sky-300/7 rounded-lg rotate-45 animate-pulse [animation-delay:2.5s]"></div>
-        <div className="absolute bottom-10 md:bottom-20 right-1/4 w-6 md:w-10 h-6 md:h-10 bg-white/3 rounded-full animate-float [animation-delay:4s]"></div>
+        <div className="absolute bottom-6 md:bottom-12 left-1/4 w-5 md:w-8 h-5 md:h-8 bg-sky-300/06 rounded-lg" />
+        <div className="absolute bottom-10 md:bottom-20 right-1/4 w-6 md:w-10 h-6 md:h-10 bg-white/04 rounded-full" />
       </div>
 
       <div className="w-full max-w-4xl mx-auto text-center relative z-10 py-10 md:py-0 flex flex-col justify-center">
@@ -127,11 +127,11 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
         </h2>
         <style jsx global>{`
           .jmun-title-interactive {
-            filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.6));
+            filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.18));
             transition: filter 0.3s, color 0.3s;
           }
           .jmun-title-interactive:hover {
-            filter: drop-shadow(0 0 24px rgba(56, 189, 248, 0.8)) brightness(1.2);
+            filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.22));
           }
           .heading-entity {
             display: inline-flex;

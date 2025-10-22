@@ -41,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geist.variable} ${inter.variable} ${ibmPlexSans.variable} antialiased min-h-screen text-white relative flex flex-col bg-black`}
+        className={`${geist.variable} ${inter.variable} ${ibmPlexSans.variable} antialiased min-h-screen text-white relative flex flex-col overflow-x-hidden`}
       >
         <Navigation />
         <div className="flex-1 flex flex-col">{children}</div>

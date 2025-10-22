@@ -81,22 +81,10 @@ const ScheduleSection: React.FC = () => {
   return (
     <AnimatedSection className="relative py-20 md:py-32 px-4 md:px-0 min-h-[80vh] flex flex-col items-center justify-center overflow-hidden">
       <div className="absolute inset-0 pointer-events-none -z-10">
-        <div
-          className="absolute left-1/4 top-10 w-40 h-40 bg-sky-400/10 rounded-full blur-2xl animate-float"
-          style={{ animationDelay: "0.5s" }}
-        ></div>
-        <div
-          className="absolute right-10 top-1/3 w-24 h-24 bg-white/10 rounded-full blur-xl animate-pulse"
-          style={{ animationDelay: "1.2s" }}
-        ></div>
-        <div
-          className="absolute left-8 bottom-10 w-28 h-28 bg-sky-300/10 rounded-full blur-2xl animate-float"
-          style={{ animationDelay: "2s" }}
-        ></div>
-        <div
-          className="absolute right-1/4 bottom-0 w-32 h-32 bg-sky-400/10 rounded-full blur-2xl animate-float"
-          style={{ animationDelay: "2.5s" }}
-        ></div>
+        <div className="absolute left-1/4 top-10 w-40 h-40 bg-sky-400/06 rounded-full" style={{ opacity: 0.6 }} />
+        <div className="absolute right-10 top-1/3 w-24 h-24 bg-white/04 rounded-full" style={{ opacity: 0.5 }} />
+        <div className="absolute left-8 bottom-10 w-28 h-28 bg-sky-300/06 rounded-full" style={{ opacity: 0.5 }} />
+        <div className="absolute right-1/4 bottom-0 w-32 h-32 bg-sky-400/06 rounded-full" style={{ opacity: 0.5 }} />
       </div>
 
       <h2 className="geist-font text-[2.8rem] md:text-[5rem] font-extrabold mb-9 leading-none relative z-10 jmun-title-interactive text-center">
@@ -111,11 +99,11 @@ const ScheduleSection: React.FC = () => {
       </h2>
       <style jsx global>{`
         .jmun-title-interactive {
-          filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.6));
+          filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.18));
           transition: filter 0.3s;
         }
         .jmun-title-interactive:hover {
-          filter: drop-shadow(0 0 24px rgba(56, 189, 248, 0.8)) brightness(1.2);
+          filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.22));
         }
         .animate-title-pulse {
           animation: titlePulseGlow 2.5s ease-in-out infinite alternate;

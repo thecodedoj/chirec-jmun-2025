@@ -58,7 +58,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     <div
       className={`relative z-10 flex flex-col items-center justify-center h-full min-h-[480px] md:min-h-[600px] px-0 text-center ${className}`}
       style={{
-        background: "linear-gradient(135deg, #000000 0%, #0a1929 50%, #000000 100%)",
+        background: "#000814",
         overflow: "visible",
         transform: "scale(1.2)",
         transformOrigin: "top center",
@@ -132,12 +132,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           style={{ letterSpacing: "-0.01em", position: "relative" }}
         >
           <span className="relative inline-block">
-            <span className="bg-gradient-to-r from-sky-400 via-blue-300 to-sky-400 bg-clip-text text-transparent">
-              CHIREC JMUN
-            </span>
-            <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none -z-10">
-              <span className="block w-full h-full rounded-full bg-gradient-to-br from-sky-400/20 via-blue-500/10 to-white/0 blur-xl animate-title-pulse" />
-            </span>
+            <span className="text-sky-400">CHIREC JMUN</span>
           </span>
         </h1>
 
@@ -147,11 +142,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
         <style jsx global>{`
           .jmun-title {
-            filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.5));
+            filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.14));
             transition: filter 0.3s;
           }
           .jmun-title:hover {
-            filter: drop-shadow(0 0 32px rgba(56, 189, 248, 0.8)) brightness(1.2);
+            filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.18));
           }
           .animate-title-pulse {
             animation: titlePulse 2.5s ease-in-out infinite alternate;
@@ -167,12 +162,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             }
           }
           .hero-glass-card {
-            box-shadow: 0 4px 32px 0 rgba(56, 189, 248, 0.4), 0 1.5px 8px 0 rgba(255, 255, 255, 0.1);
+            box-shadow: 0 2px 12px 0 rgba(0,0,0,0.4);
             transition: box-shadow 0.3s, transform 0.3s;
           }
           .hero-glass-card:hover {
-            box-shadow: 0 8px 48px 0 rgba(56, 189, 248, 0.6), 0 2px 12px 0 rgba(255, 255, 255, 0.2);
-            transform: scale(1.03);
+            box-shadow: 0 4px 18px 0 rgba(0,0,0,0.45);
+            transform: scale(1.02);
           }
           .hero-glass-card * {
             transition: color 0.3s, background 0.3s;
@@ -187,9 +182,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         `}</style>
 
         <div className="mt-6 mb-10 w-full max-w-xl">
-          <div className="hero-glass-card group relative rounded-2xl px-7 py-6 shadow-2xl flex flex-col items-center gap-3 border border-sky-400/30 backdrop-blur-xl bg-gradient-to-br from-sky-500/10 via-blue-900/10 to-black/20 transition-all duration-300 hover:scale-[1.03] hover:shadow-sky-500/30 hover:border-sky-400/40">
-            <div className="absolute -inset-1 rounded-2xl pointer-events-none z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <div className="w-full h-full rounded-2xl bg-gradient-to-br from-sky-500/10 via-blue-400/5 to-black/10 blur-lg animate-card-glow"></div>
+          <div className="hero-glass-card group relative rounded-2xl px-7 py-6 shadow-md flex flex-col items-center gap-3 border border-sky-400/10 bg-[#061226] transition-all duration-300 hover:scale-[1.02] hover:shadow-md">
+            <div className="absolute -inset-1 rounded-2xl pointer-events-none z-0 opacity-40 transition-opacity duration-300">
+              <div className="w-full h-full rounded-2xl bg-[#071226] opacity-60"></div>
             </div>
             
             <div className="inter-font flex flex-col md:flex-row items-center gap-2 md:gap-4 mt-2 z-10">
@@ -197,7 +192,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 1st - 2nd November, 2025
               </span>
               <span className="text-sky-300 text-xs md:text-base font-medium group-hover:text-white transition-colors duration-300">
-                CHIREC International School, Serilingampally
+                CHIREC International School, Kondapur
               </span>
             </div>
           </div>

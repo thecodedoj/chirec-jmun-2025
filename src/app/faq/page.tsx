@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     q: "What are the dates for CHIREC JMUN?",
-    a: "CHIREC JMUN 2025 will take place on November 1st and 2nd, 2025, at CHIREC International School, Serilingampally campus.",
+  a: "CHIREC JMUN 2025 will take place on November 1st and 2nd, 2025, at CHIREC International School, Kondapur campus.",
   },
   {
     q: "Do I need prior MUN experience to participate?",

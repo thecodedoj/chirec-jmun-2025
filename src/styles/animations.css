@@ -12,10 +12,10 @@
 @keyframes glow {
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.18);
   }
   50% {
-    box-shadow: 0 0 40px rgba(56, 189, 248, 0.6), 0 0 60px rgba(56, 189, 248, 0.3);
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.28), 0 0 18px rgba(56, 189, 248, 0.14);
   }
 }
 
@@ -23,13 +23,12 @@
 @keyframes textGlow {
   0%,
   100% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
-      0 0 20px rgba(255, 255, 255, 0.2), 0 0 30px rgba(56, 189, 248, 0.3);
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.18),
+      0 0 8px rgba(255, 255, 255, 0.12), 0 0 10px rgba(56, 189, 248, 0.12);
   }
   50% {
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.6),
-      0 0 30px rgba(255, 255, 255, 0.4), 0 0 40px rgba(56, 189, 248, 0.5),
-      0 0 50px rgba(56, 189, 248, 0.3);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3),
+      0 0 12px rgba(255, 255, 255, 0.18), 0 0 18px rgba(56, 189, 248, 0.2);
   }
 }
 
@@ -76,7 +75,7 @@
 }
 
 .animate-glow {
-  animation: glow 4s ease-in-out infinite;
+  animation: glow 6s ease-in-out infinite;
 }
 
 .animate-morph {
@@ -84,7 +83,7 @@
 }
 
 .text-glow {
-  animation: textGlow 3s ease-in-out infinite;
+  animation: textGlow 4s ease-in-out infinite;
   font-feature-settings: "kern" 1;
   letter-spacing: 0.05em;
 }

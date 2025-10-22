@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import logo from "../ui/464453423_1097790878570733_5449522318736902072_n_1760863098929.jpg";
 import { usePathname } from "next/navigation";
 
 interface NavigationProps {
@@ -53,7 +53,7 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 group">
             <img
-              src="/jmun-logo.jpg"
+              src={typeof logo === "string" ? logo : logo.src}
               alt="CHIREC JMUN Logo"
               width={isScrolled ? 40 : 50}
               height={isScrolled ? 40 : 50}
