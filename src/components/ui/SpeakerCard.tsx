@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface SpeakerCardProps {
   height: number | string;
   width: number | string;
-  image: string;
+  image: string | StaticImageData;
   description: string;
   descriptionClassName?: string;
 }

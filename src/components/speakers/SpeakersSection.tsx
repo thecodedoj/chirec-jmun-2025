@@ -1,6 +1,8 @@
 import React from "react";
 import SpeakerCard from "../ui/SpeakerCard";
 import AnimatedSection from "../ui/AnimatedSection";
+import img1 from "./1_1760862917103.png";
+import img2 from "./2_1760862917104.png";
 
 function CoSecGensSectionGlobalStyles() {
   return (
@@ -33,12 +35,12 @@ const coSecretaryGenerals = [
   {
     description:
        "Anusha Anchlia is a Grade 11 CBSE student at Chirec International School, Kondapur, studying Commerce with Math. She has participated in over 15 MUNs. She enjoys participating in a vast variety of committees and exploring new topics. Anusha also serves as Secretary of her school's Interact Club. In her free time, she loves to read books, listen to music, and binge-watch her favourite TV shows for the fifth time.\n\nHaving been part of Chirec MUN as a delegate, organising committee member, Executive Board member, and secretariat, she now steps into the role of Secretary General. As Secretary-General for this year's conference, she aims to work tirelessly to make this edition of CHIREC JMUN the best one yet. She looks forward to seeing you all there!",
-    image: "/images/speakers/1_1760862917103.png",
+    image: img1,
   },
   {
     description:
       "Arnav Reddy Jakka is an IBDP year 1 student currently studying Chemistry, Physics and Mathematics at a higher level. Judging by his academic selection you may think he's a serious person, but don't be mistaken.\n\nIf you're his friend be prepared to be sent the most random reels which only he finds funny. When he's not laughing at those, you'll probably see him laughing around you… or maybe at you. But all jokes aside if he's ever quiet, it's probably because his mouth's full - as an avid foodie, he's always eating something. Just like in cricket, Jakka's an all-rounder in everything he does, managing to pull off sports, studies, and MUN with the same energy and dedication he brings to every match. That's exactly what makes him the perfect Secretary General for this year's conference.",
-    image: "/images/speakers/2_1760862921371.png",
+    image: img2,
   },
 ];
 

@@ -35,7 +35,7 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 animate-slide-down ${
         isScrolled
-          ? "bg-black/70 backdrop-blur-xl shadow-lg py-3 border-b border-white/10 glass-navbar"
+          ? "bg-black/70 backdrop-blur-xl shadow-lg py-2 border-b border-white/10 glass-navbar"
           : "bg-black/30 backdrop-blur-lg py-6 glass-navbar"
       } ${className}`}
       style={{
@@ -52,14 +52,18 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
       <div className="max-w-8xl mx-auto px-6 md:px-12">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 group">
-            <Image 
-              src="/jmun-logo.jpg" 
-              alt="CHIREC JMUN Logo" 
-              width={50} 
-              height={50}
+            <img
+              src="/jmun-logo.jpg"
+              alt="CHIREC JMUN Logo"
+              width={isScrolled ? 40 : 50}
+              height={isScrolled ? 40 : 50}
+              onError={(e) => {
+                const target = e.currentTarget as HTMLImageElement;
+                target.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
+              }}
               className="rounded-lg transition-all duration-300 group-hover:scale-105"
             />
-            <span className="ibm-font text-2xl md:text-3xl font-bold bg-gradient-to-r from-sky-400 to-blue-400 bg-clip-text text-transparent transition-all duration-300 group-hover:scale-105">
+            <span className={`ibm-font font-bold bg-gradient-to-r from-sky-400 to-blue-400 bg-clip-text text-transparent transition-all duration-300 group-hover:scale-105 ${isScrolled ? 'text-2xl md:text-3xl' : 'text-2xl md:text-3xl'}`}>
               CHIREC JMUN
             </span>
           </Link>
@@ -69,7 +73,7 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative px-4 py-2 rounded-full transition-all duration-300 nav-hover flex flex-col items-center justify-center text-center
+                className={`relative px-4 py-2 rounded-full transition-all duration-300 nav-hover flex flex-col items-center justify-center text-center ${isScrolled ? 'text-lg md:text-xl' : 'text-base md:text-base'}
                   ${
                     pathname === item.href
                       ? "text-sky-400 bg-sky-400/10 shadow shadow-sky-400/10 hover:bg-sky-400/20 hover:shadow-sky-400/20"
@@ -94,7 +98,7 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
               target="_blank"
               rel="noopener noreferrer"
               >
-              <span className="relative z-10 font-semibold">Register Now</span>
+              <span className={`relative z-10 font-semibold ${isScrolled ? 'text-base md:text-lg' : 'text-sm md:text-base'}`}>Register Now</span>
               </a>
               <div className="absolute inset-0 bg-gradient-to-r from-sky-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>

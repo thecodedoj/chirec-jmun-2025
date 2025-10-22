@@ -60,12 +60,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       style={{
         background: "linear-gradient(135deg, #000000 0%, #0a1929 50%, #000000 100%)",
         overflow: "visible",
+        transform: "scale(1.2)",
+        transformOrigin: "top center",
       }}
     >
       <div className="hidden md:block">
-        <Image
+        <img
           src="/hero/cliff.svg"
-          alt="Cliff"
+          alt=""
           className="absolute left-0 bottom-0"
           width={1920}
           height={400}
@@ -81,14 +83,20 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             userSelect: "none",
             filter: "brightness(0) invert(0)",
           }}
-          draggable="false"
-          priority
+          draggable={false}
+          onError={(e) => {
+            const t = e.currentTarget as HTMLImageElement;
+            // replace with a 1x1 transparent gif to remove broken icon
+            t.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
+          }}
+          role="presentation"
+          aria-hidden="true"
         />
       </div>
       
-      <Image
+      <img
         src="/hero/jump.svg"
-        alt="Jumping silhouette hero"
+        alt=""
         className="absolute left-1/2"
         width={600}
         height={800}
@@ -104,12 +112,18 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           bottom: jumperBottom,
           zIndex: 2,
           transition: "height 0.2s, bottom 0.2s",
+          transformOrigin: "bottom center",
           pointerEvents: "none",
           userSelect: "none",
           filter: "brightness(0) invert(0)",
         }}
-        draggable="false"
-        priority
+        draggable={false}
+        onError={(e) => {
+          const t = e.currentTarget as HTMLImageElement;
+          t.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
+        }}
+        role="presentation"
+        aria-hidden="true"
       />
 
       <div className="relative z-10 flex flex-col items-center justify-center w-full h-full pt-10 md:pt-20 pb-8">
