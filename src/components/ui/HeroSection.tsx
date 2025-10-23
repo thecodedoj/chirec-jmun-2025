@@ -206,12 +206,24 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           <Countdown targetDate={eventDate} />
         </div>
 
-        <button
-          onClick={handleCtaClick}
-          className="inter-font font-medium border-2 border-sky-400 text-white hover:bg-sky-400 hover:text-black px-8 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-50 shadow-md hover:shadow-sky-400/50"
-        >
-          {ctaText}
-        </button>
+        <div className="flex flex-col md:flex-row items-center gap-4 mb-8">
+  <button
+    onClick={handleCtaClick}
+    className="inter-font font-medium border-2 border-sky-400 text-white hover:bg-sky-400 hover:text-black px-8 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-50 shadow-md hover:shadow-sky-400/50"
+  >
+    {ctaText}
+  </button>
+
+  <a
+    href="https://drive.google.com/drive/folders/1kuFN_OY_GOPSiFg1ehn0mWvlsGhTp-22?usp=sharing"
+    className="inter-font font-medium border-2 border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-black px-8 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-50 shadow-md hover:shadow-sky-400/50"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Mandatory Forms
+  </a>
+</div>
+
       </div>
     </div>
   );
