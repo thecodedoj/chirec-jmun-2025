@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
                 rel="noopener noreferrer"
                 className="hover:text-sky-300 transition"
               >
-                ISRP Campus, CHIREC
+                Kondapur Campus, CHIREC
               </a>
             </li>
             <li className="flex items-center gap-2">
@@ -192,7 +192,7 @@ const Footer: React.FC = () => {
           <span className="text-sky-400 animate-pulse">❤️</span>
           <span>by</span>
           <span className="text-white font-medium hover:text-sky-300 transition-colors cursor-default">
-            Prajwal Doranala, Akshaj Velpula, Jimit Nahar, Nishant Gottumukkala, Sanjaay Rajkumar
+            Prajwal Doranala, Akshaj Velpula, Nishant Gottumukkala, Jimit Nahar & Sanjaay Rajkumar
           </span>
         </div>
       </div>
