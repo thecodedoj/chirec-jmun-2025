@@ -47,12 +47,12 @@ export default function MeetTheTeamPage() {
         <span className="heading-entity meet-team-heading-responsive">
           <span className="geist-font heading-main">Meet the </span>
           <span className="ibm-font heading-tedx" style={{ display: 'inline-flex', alignItems: 'center' }}>
-            TED
+            JMUN
             <span
               className="relative heading-x"
               style={{ fontSize: "0.7em", top: "-0.45em", marginLeft: '-0.08em', marginRight: '-0.08em' }}
             >
-              x
+              
             </span>
           </span>
           <span className="ibm-font heading-youth" style={{ marginLeft: '-0.12em' }}>Youth@CHIREC</span>
