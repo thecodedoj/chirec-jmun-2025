@@ -22,7 +22,19 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
   const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
   const handleToggle = () => {
-    if (isMobile) setShowOverlay((v) => !v);
+    // allow toggling on all devices via click
+    setShowOverlay((v) => !v);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    // allow Enter/Space to toggle, and Esc to close
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      setShowOverlay((v) => !v);
+    }
+    if (e.key === "Escape") {
+      setShowOverlay(false);
+    }
   };
 
   return (
@@ -31,6 +43,7 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
       style={{ height, width, aspectRatio: "4/5" }}
       onClick={handleToggle}
       tabIndex={0}
+      onKeyDown={handleKeyDown}
     >
       <Image
         src={image}
@@ -38,10 +51,12 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
         fill
         className={
           `object-cover transition-transform duration-500 group-hover:scale-105 ` +
-          (isMobile
-            ? showOverlay
-              ? "opacity-0"
-              : "opacity-100"
+          // hide image whenever overlay is explicitly shown; otherwise preserve
+          // existing hover/mobile behavior
+          (showOverlay
+            ? "opacity-0"
+            : isMobile
+            ? "opacity-100"
             : "opacity-100 group-hover:opacity-0")
         }
         style={{
@@ -54,16 +69,18 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
         priority
       />
       <div
-        className={`absolute inset-0 z-20 transition-opacity duration-300 pointer-events-none rounded-2xl ${
-          isMobile
-            ? showOverlay
-              ? "opacity-100"
-              : "opacity-0"
-            : "opacity-0 group-hover:opacity-100"
+        className={`absolute inset-0 z-20 transition-opacity duration-300 rounded-2xl ${
+          // make overlay interactive when visible so it can receive clicks/keyboard
+          showOverlay
+            ? "opacity-100 pointer-events-auto"
+            : isMobile
+            ? "opacity-0 pointer-events-none"
+            : "opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto"
         }`}
         style={{
-          background:
-            "linear-gradient(135deg, rgba(8, 76, 97, 1), rgba(14, 165, 233, 1))",
+          background: showOverlay
+            ? "rgba(14,165,233,1)" // solid blue when explicitly shown
+            : "linear-gradient(135deg, rgba(8, 76, 97, 1), rgba(14, 165, 233, 1))",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",

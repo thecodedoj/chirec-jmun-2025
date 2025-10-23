@@ -192,7 +192,7 @@ const Footer: React.FC = () => {
           <span className="text-sky-400 animate-pulse">❤️</span>
           <span>by</span>
           <span className="text-white font-medium hover:text-sky-300 transition-colors cursor-default">
-            JMUN Team
+            JMUN Team, Sanjaay Rajkumar
           </span>
         </div>
       </div>
