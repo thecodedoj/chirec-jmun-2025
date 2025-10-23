@@ -117,7 +117,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
       </div>
 
       <div className="w-full max-w-4xl mx-auto text-center relative z-10 py-10 md:py-0 flex flex-col justify-center">
-        <h2 className="geist-font text-[2.2rem] md:text-[3.5rem] font-extrabold mb-6 md:mb-8 pt-8 md:pt-10 leading-none relative z-10 jmun-title-interactive text-center">
+        <h2 className="geist-font text-[2.2rem] md:text-[3.5rem] font-extrabold mb-6 md:mb-8 pt-20 md:pt-24 leading-none relative z-10 jmun-title-interactive text-center">
           <span className="heading-entity about-heading-responsive">
             <span className="geist-font heading-main bg-gradient-to-r from-sky-400 to-blue-400 bg-clip-text text-transparent">What is JMUN?</span>
           </span>
