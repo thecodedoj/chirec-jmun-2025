@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
                 rel="noopener noreferrer"
                 className="hover:text-sky-300 transition"
               >
-                ISRP Campus, CHIREC
+                Kondapur Campus, CHIREC
               </a>
             </li>
             <li className="flex items-center gap-2">
