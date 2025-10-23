@@ -1,13 +1,15 @@
 "use client";
 
 import React from "react";
-import ScheduleSection from "@/components/ui/ScheduleSection";
 
 export default function SchedulePage() {
   return (
-    <>
-    {/* Schedule Section */}
-    <ScheduleSection />
-    </>
+    <div
+      style={{
+        width: "100vw",
+        height: "100vh",
+        backgroundColor: "black",
+      }}
+    ></div>
   );
 }

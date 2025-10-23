@@ -2,9 +2,9 @@
 "use client";
 
 import React from "react";
+import Link from "next/link"; // ✅ import Link for navigation
 import "./committees.css";
 
-// ✅ Correct imports (make sure the image files exist in the same folder)
 import disecLogo from "./disec.png";
 import unhrcLogo from "./unhrc.png";
 import ccpjLogo from "./ccpj.png";
@@ -14,17 +14,15 @@ import lokLogo from "./lok-sabha.png";
 import unicefLogo from "./unicef.png";
 import ipLogo from "./ip.png";
 
-// ✅ Type for each committee
 interface Committee {
   id: number;
   name: string;
   fullName: string;
-  agenda?: string; // made optional for IP
+  agenda?: string;
   logoUrl: { src: string };
   freezeDate?: string;
 }
 
-// ✅ All committees
 const committees: Committee[] = [
   {
     id: 1,
@@ -87,7 +85,7 @@ const committees: Committee[] = [
     id: 8,
     name: "IP",
     fullName: "International Press",
-    logoUrl: ipLogo, // 🆕 added IP without agenda
+    logoUrl: ipLogo,
   },
 ];
 
@@ -103,9 +101,12 @@ export default function CommitteesPage() {
 
       <div className="committees-grid">
         {committees.map((committee) => (
-          <div key={committee.id} className="committee-card">
+          <Link
+            key={committee.id}
+            href={`/${committee.name.toLowerCase().replace(" ", "-")}`}
+            className="committee-card" // ✅ apply card styling directly to Link
+          >
             <div className="committee-logo-container">
-              {/* ✅ Using .src to load images correctly */}
               <img
                 src={committee.logoUrl.src}
                 alt={`${committee.name} Logo`}
@@ -117,7 +118,6 @@ export default function CommitteesPage() {
               <h2 className="committee-name">{committee.name}</h2>
               <h3 className="committee-full-name">{committee.fullName}</h3>
 
-              {/* Only show agenda if available */}
               {committee.agenda && (
                 <div className="committee-agenda">
                   <h4>Agenda</h4>
@@ -132,7 +132,7 @@ export default function CommitteesPage() {
                 </div>
               )}
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
