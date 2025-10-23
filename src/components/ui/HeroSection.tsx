@@ -28,7 +28,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
   const [jumperHeight, setJumperHeight] = useState(320);
   const [jumperBottom, setJumperBottom] = useState("28vh");
-  
+
   useEffect(() => {
     function updateJumperSize() {
       const windowHeight = window.innerHeight;
@@ -86,14 +86,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           draggable={false}
           onError={(e) => {
             const t = e.currentTarget as HTMLImageElement;
-            // replace with a 1x1 transparent gif to remove broken icon
             t.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
           }}
           role="presentation"
           aria-hidden="true"
         />
       </div>
-      
+
       <img
         src="/hero/jump.svg"
         alt=""
@@ -162,11 +161,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             }
           }
           .hero-glass-card {
-            box-shadow: 0 2px 12px 0 rgba(0,0,0,0.4);
+            box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.4);
             transition: box-shadow 0.3s, transform 0.3s;
           }
           .hero-glass-card:hover {
-            box-shadow: 0 4px 18px 0 rgba(0,0,0,0.45);
+            box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.45);
             transform: scale(1.02);
           }
           .hero-glass-card * {
@@ -176,17 +175,22 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             animation: cardGlow 2.5s ease-in-out infinite alternate;
           }
           @keyframes cardGlow {
-            0% { opacity: 0.5; }
-            100% { opacity: 1; }
+            0% {
+              opacity: 0.5;
+            }
+            100% {
+              opacity: 1;
+            }
           }
         `}</style>
 
         <div className="mt-6 mb-10 w-full max-w-xl">
           <div className="hero-glass-card group relative rounded-2xl px-7 py-6 shadow-md flex flex-col items-center gap-3 border border-sky-400/10 bg-[#061226] transition-all duration-300 hover:scale-[1.02] hover:shadow-md">
+            {/* 🔹 Background overlay updated to blue tint */}
             <div className="absolute -inset-1 rounded-2xl pointer-events-none z-0 opacity-40 transition-opacity duration-300">
-              <div className="w-full h-full rounded-2xl bg-[#071226] opacity-60"></div>
+              <div className="w-full h-full rounded-2xl bg-sky-400/10 opacity-60"></div>
             </div>
-            
+
             <div className="inter-font flex flex-col md:flex-row items-center gap-2 md:gap-4 mt-2 z-10">
               <span className="text-white font-bold text-base md:text-lg group-hover:text-sky-300 transition-colors duration-300">
                 1st - 2nd November, 2025
