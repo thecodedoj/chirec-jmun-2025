@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="800" viewBox="0 0 600 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M300 50C270 50 245 75 245 105V695C245 725 270 750 300 750C330 750 355 725 355 695V105C355 75 330 50 300 50Z" fill="#1E293B"/>
+  <circle cx="300" cy="100" r="50" fill="#1E293B"/>
+  <path d="M245 400H185C170 400 155 415 155 430V460C155 475 170 490 185 490H245" stroke="#1E293B" stroke-width="20"/>
+  <path d="M355 400H415C430 400 445 415 445 430V460C445 475 430 490 415 490H355" stroke="#1E293B" stroke-width="20"/>
+</svg>
