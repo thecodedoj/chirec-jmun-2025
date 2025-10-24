@@ -91,7 +91,7 @@ const Footer: React.FC = () => {
                 </svg>
               </span>
               <a
-                href="https://www.google.com/maps/dir//CHIREC+International+School+-+IBDP+%26+Cambridge+Campus+F8HM%2B4V5+Spring+Valley+Serilingampalle+(M),+Hyderabad,+Telangana+500133/@17.4777625,78.3347344,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x3bcb939445dac8ed:0x8cbe499e963067c5"
+                href="https://www.google.com/maps/dir//CHIREC+International+School+-+Kondapur+(CBSE)+Campus,+Botanical+Garden+Road,+Kondapur,+Sri+Ram+Nagar,+Hyderabad,+Telangana/@17.4626027,78.3101554,13z/data=!3m1!5s0x3bcb93b2134e5df3:0xdf609588220caf97!4m8!4m7!1m0!1m5!1m1!1s0x3bcb93b241cd072f:0xa6160d79d214758c!2m2!1d78.3514405!2d17.462607?entry=ttu&g_ep=EgoyMDI1MTAyMC4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-sky-300 transition"
