@@ -25,7 +25,7 @@ const ibmPlexSans = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "TEDxYouth@CHIREC",
+  title: "CHIREC JMUN 2025",
   description:
     "TedxYouth@CHIREC is a conference for student speakers to tell their story.",
   icons: {
