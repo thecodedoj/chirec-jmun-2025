@@ -10,7 +10,7 @@ interface AboutSectionProps {
 const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
   const stats = [
     {
-      number: "1st",
+      number: "5th",
       title: "CHIREC JMUN",
       icon: (
         <svg
