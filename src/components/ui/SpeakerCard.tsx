@@ -22,12 +22,10 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
   const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
   const handleToggle = () => {
-    // allow toggling on all devices via click
     setShowOverlay((v) => !v);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    // allow Enter/Space to toggle, and Esc to close
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
       setShowOverlay((v) => !v);
@@ -47,30 +45,17 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
     >
       <Image
         src={image}
-        alt={description}
+        alt="Speaker"
         fill
-        className={
-          `object-cover transition-transform duration-500 group-hover:scale-105 ` +
-          // hide image whenever overlay is explicitly shown; otherwise preserve
-          // existing hover/mobile behavior
-          (showOverlay
-            ? "opacity-0"
-            : isMobile
-            ? "opacity-100"
-            : "opacity-100 group-hover:opacity-0")
-        }
-        style={{
-          zIndex: 1,
-          objectFit: "cover",
-          objectPosition: "top center",
-          aspectRatio: "4/5",
-        }}
+        className={`object-cover transition-transform duration-500 group-hover:scale-105 ${
+          showOverlay ? "opacity-0" : isMobile ? "opacity-100" : "opacity-100 group-hover:opacity-0"
+        }`}
+        style={{ zIndex: 1, objectFit: "cover", objectPosition: "top center", aspectRatio: "4/5" }}
         sizes="(max-width: 768px) 100vw, 400px"
         priority
       />
       <div
         className={`absolute inset-0 z-20 transition-opacity duration-300 rounded-2xl ${
-          // make overlay interactive when visible so it can receive clicks/keyboard
           showOverlay
             ? "opacity-100 pointer-events-auto"
             : isMobile
@@ -79,7 +64,7 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
         }`}
         style={{
           background: showOverlay
-            ? "rgba(14,165,233,1)" // solid blue when explicitly shown
+            ? "rgba(14,165,233,1)"
             : "linear-gradient(135deg, rgba(8, 76, 97, 1), rgba(14, 165, 233, 1))",
           display: "flex",
           flexDirection: "column",
@@ -95,7 +80,12 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
           }`}
           style={{ fontSize: "0.98rem" }}
         >
-          {description}
+          {description.split("\n").map((line, idx) => (
+            <React.Fragment key={idx}>
+              {line}
+              <br />
+            </React.Fragment>
+          ))}
         </div>
       </div>
     </div>
