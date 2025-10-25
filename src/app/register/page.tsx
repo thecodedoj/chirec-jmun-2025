@@ -51,6 +51,7 @@ const RegisterPage: React.FC = () => {
 
 
         {/* Hero Section */}
+        {/* Hero Section */}
 <section className="relative z-10 px-6 md:px-12 py-12 md:py-16 mt-[200px]">
   <div className="max-w-5xl mx-auto text-center">
     <h2 className="geist-font text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
@@ -74,8 +75,11 @@ const RegisterPage: React.FC = () => {
                 <AlertCircle className="h-6 w-6 text-amber-400 flex-shrink-0 mt-0.5" />
                 <div>
                   <h3 className="text-lg font-semibold text-amber-300 mb-1">Important</h3>
+                  <p className="text-amber-100/90 mb-2">
+                    After registering, you <strong>must</strong> complete the mandatory forms immediately.
+                  </p>
                   <p className="text-amber-100/90">
-                    After registering, check the Allocation Matrix to view your committee and portfolio assignments.
+                    Once you've completed the mandatory forms, check the Allocation Matrix to view your committee and portfolio assignments.
                   </p>
                 </div>
               </div>
@@ -91,12 +95,12 @@ const RegisterPage: React.FC = () => {
                     <Users className="w-8 h-8 text-sky-300" />
                   </div>
                   <h3 className="text-2xl font-bold text-sky-300">
-                    Delegate Registration
+                    Individual Registration
                   </h3>
                 </div>
                 <div className="p-6">
                   <p className="text-gray-300 mb-6 leading-relaxed text-sm">
-                    Register as a delegate and represent your school in various committees. 
+                    Register as an individual delegate and represent your school in various committees. 
                     Perfect for students looking to enhance their diplomatic skills and engage in 
                     meaningful debate on global issues.
                   </p>
@@ -127,6 +131,8 @@ const RegisterPage: React.FC = () => {
                     International Press registration for aspiring journalists and media professionals. 
                     Cover the conference, conduct interviews, and report on the proceedings. Shape the 
                     narrative and bring MUN to life through your lens.
+                    <br /><br />
+                    <strong className="text-blue-300">Remember:</strong> Complete the mandatory forms immediately after registering!
                   </p>
                   <a 
                     href={registrationLinks.ip}
