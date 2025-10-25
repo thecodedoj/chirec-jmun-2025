@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   description:
     "Register for CHIREC JMUN 2025.",
   icons: {
-    icon: '/favicon.ico',
+    icon: '/464453423_1097790878570733_5449522318736902072_n_1760863098929.ico',
   },
 };
 
