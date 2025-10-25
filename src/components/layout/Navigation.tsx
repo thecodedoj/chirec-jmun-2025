@@ -100,28 +100,23 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
           </div>
 
           {/* Register + Mandatory Forms buttons */}
-          <div className="hidden md:flex items-center gap-4">
-            <button
-              onClick={() =>
-                window.open(
-                  "https://forms.office.com/e/Nvkd0kNPA7",
-                  "_blank"
-                )
-              }
-              className="inter-font font-medium border-2 border-sky-400 text-white hover:bg-sky-400 hover:text-black px-6 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-50 shadow-md hover:shadow-sky-400/50"
-            >
-              Register Now
-            </button>
+<div className="hidden md:flex items-center gap-4">
+  <Link
+    href="/register"
+    className="inter-font font-medium border-2 border-sky-400 text-white hover:bg-sky-400 hover:text-black px-6 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-50 shadow-md hover:shadow-sky-400/50"
+  >
+    Register Now
+  </Link>
 
-            <a
-              href="https://drive.google.com/drive/folders/1kuFN_OY_GOPSiFg1ehn0mWvlsGhTp-22?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inter-font font-medium border-2 border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-black px-6 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-50 shadow-md hover:shadow-sky-400/50"
-            >
-              Mandatory Forms
-            </a>
-          </div>
+  <a
+    href="https://drive.google.com/drive/folders/1kuFN_OY_GOPSiFg1ehn0mWvlsGhTp-22?usp=sharing"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inter-font font-medium border-2 border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-black px-6 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-50 shadow-md hover:shadow-sky-400/50"
+  >
+    Mandatory Forms
+  </a>
+</div>
 
           {/* Mobile menu button */}
           <button
@@ -171,28 +166,24 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
             ))}
 
             {/* Mobile Register + Mandatory Forms */}
-            <div className="flex flex-col gap-4 mt-4">
-              <button
-                onClick={() =>
-                  window.open(
-                    "https://forms.office.com/e/Nvkd0kNPA7",
-                    "_blank"
-                  )
-                }
-                className="w-full bg-sky-400 hover:bg-sky-500 text-black py-3 px-4 rounded-xl transition-all duration-300 flex items-center justify-center font-semibold"
-              >
-                Register Now
-              </button>
+<div className="flex flex-col gap-4 mt-4">
+  <Link
+    href="/register"
+    onClick={() => setIsMobileMenuOpen(false)}
+    className="w-full bg-sky-400 hover:bg-sky-500 text-black py-3 px-4 rounded-xl transition-all duration-300 flex items-center justify-center font-semibold"
+  >
+    Register Now
+  </Link>
 
-              <a
-                href="https://drive.google.com/drive/folders/1kuFN_OY_GOPSiFg1ehn0mWvlsGhTp-22?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-transparent border-2 border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-black py-3 px-4 rounded-xl transition-all duration-300 flex items-center justify-center font-semibold"
-              >
-                Mandatory Forms
-              </a>
-            </div>
+  <a
+    href="https://drive.google.com/drive/folders/1kuFN_OY_GOPSiFg1ehn0mWvlsGhTp-22?usp=sharing"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-full bg-transparent border-2 border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-black py-3 px-4 rounded-xl transition-all duration-300 flex items-center justify-center font-semibold"
+  >
+    Mandatory Forms
+  </a>
+</div>
           </div>
         </div>
       </div>

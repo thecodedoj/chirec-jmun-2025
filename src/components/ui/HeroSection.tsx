@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Countdown from "./Countdown";
 
 interface HeroSectionProps {
@@ -16,10 +17,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   ctaText = "Register Now",
   className = "",
 }) => {
-  const handleCtaClick = () => {
-    window.open("https://forms.office.com/e/Nvkd0kNPA7", "_blank", "noopener,noreferrer");
-  };
-
   const NAVBAR_HEIGHT = 80;
   const JUMPER_MIN_HEIGHT = 120;
   const JUMPER_MAX_HEIGHT = 1000;
@@ -84,12 +81,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             filter: "brightness(0) invert(0)",
           }}
           draggable={false}
-          onError={(e) => {
-            const t = e.currentTarget as HTMLImageElement;
-            t.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
-          }}
-          role="presentation"
-          aria-hidden="true"
         />
       </div>
 
@@ -117,12 +108,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           filter: "brightness(0) invert(0)",
         }}
         draggable={false}
-        onError={(e) => {
-          const t = e.currentTarget as HTMLImageElement;
-          t.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
-        }}
-        role="presentation"
-        aria-hidden="true"
       />
 
       <div className="relative z-10 flex flex-col items-center justify-center w-full h-full pt-10 md:pt-20 pb-8">
@@ -130,9 +115,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           className="geist-font text-[2.2rem] md:text-[4.5rem] font-extrabold text-white mb-4 leading-none relative z-10 jmun-title text-center"
           style={{ letterSpacing: "-0.01em", position: "relative" }}
         >
-          <span className="relative inline-block">
-            <span className="text-sky-400">CHIREC JMUN</span>
-          </span>
+          <span className="text-sky-400">CHIREC JMUN</span>
         </h1>
 
         <h2 className="inter-font text-xl md:text-3xl font-light text-sky-200 mb-8 tracking-wide">
@@ -147,46 +130,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           .jmun-title:hover {
             filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.18));
           }
-          .animate-title-pulse {
-            animation: titlePulse 2.5s ease-in-out infinite alternate;
-          }
-          @keyframes titlePulse {
-            0% {
-              opacity: 0.7;
-              transform: scale(1);
-            }
-            100% {
-              opacity: 1;
-              transform: scale(1.08);
-            }
-          }
-          .hero-glass-card {
-            box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.4);
-            transition: box-shadow 0.3s, transform 0.3s;
-          }
-          .hero-glass-card:hover {
-            box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.45);
-            transform: scale(1.02);
-          }
-          .hero-glass-card * {
-            transition: color 0.3s, background 0.3s;
-          }
-          .animate-card-glow {
-            animation: cardGlow 2.5s ease-in-out infinite alternate;
-          }
-          @keyframes cardGlow {
-            0% {
-              opacity: 0.5;
-            }
-            100% {
-              opacity: 1;
-            }
-          }
         `}</style>
 
         <div className="mt-6 mb-10 w-full max-w-xl">
           <div className="hero-glass-card group relative rounded-2xl px-7 py-6 shadow-md flex flex-col items-center gap-3 border border-sky-400/10 bg-[#061226] transition-all duration-300 hover:scale-[1.02] hover:shadow-md">
-            {/* 🔹 Background overlay updated to blue tint */}
             <div className="absolute -inset-1 rounded-2xl pointer-events-none z-0 opacity-40 transition-opacity duration-300">
               <div className="w-full h-full rounded-2xl bg-sky-400/10 opacity-60"></div>
             </div>
@@ -206,24 +153,24 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           <Countdown targetDate={eventDate} />
         </div>
 
+        {/* ✅ fixed double wrapper issue here */}
         <div className="flex flex-col md:flex-row items-center gap-4 mb-8">
-  <button
-    onClick={handleCtaClick}
-    className="inter-font font-medium border-2 border-sky-400 text-white hover:bg-sky-400 hover:text-black px-8 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-50 shadow-md hover:shadow-sky-400/50"
-  >
-    {ctaText}
-  </button>
+          <Link
+            href="/register"
+            className="inter-font font-medium border-2 border-sky-400 text-white hover:bg-sky-400 hover:text-black px-8 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-50 shadow-md hover:shadow-sky-400/50"
+          >
+            {ctaText}
+          </Link>
 
-  <a
-    href="https://drive.google.com/drive/folders/1kuFN_OY_GOPSiFg1ehn0mWvlsGhTp-22?usp=sharing"
-    className="inter-font font-medium border-2 border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-black px-8 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-50 shadow-md hover:shadow-sky-400/50"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Mandatory Forms
-  </a>
-</div>
-
+          <a
+            href="https://drive.google.com/drive/folders/1kuFN_OY_GOPSiFg1ehn0mWvlsGhTp-22?usp=sharing"
+            className="inter-font font-medium border-2 border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-black px-8 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-50 shadow-md hover:shadow-sky-400/50"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Mandatory Forms
+          </a>
+        </div>
       </div>
     </div>
   );
