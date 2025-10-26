@@ -78,20 +78,18 @@ He is very excited to be your chair, and hopes to see you at Chirec.`,
         </div>
       </div>
 
-      {/* Background Guide Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="max-w-4xl mx-auto relative">
+        <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-r from-sky-500/10 to-blue-500/10 backdrop-blur-xl rounded-2xl p-8 border border-sky-400/20 shadow-xl">
-            <h2 className="text-3xl font-bold mb-4 text-sky-400 text-center">
-              Background Guide
-            </h2>
+            <h2 className="text-3xl font-bold mb-4 text-sky-400 text-center">Background Guide</h2>
             <p className="text-gray-300 mb-6 text-center">
-              Download the comprehensive background guide to prepare for the
-              committee session.
+              Download the comprehensive background guide to prepare for the committee session.
             </p>
             <div className="flex justify-center">
-              <button
-                onClick={handleComingSoonClick}
+              <a
+
+                href="/committees/ccpcj/BG.pdf"
+                target = "_blank"
                 className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-sky-500 to-blue-600 rounded-xl font-semibold text-white shadow-lg hover:shadow-2xl hover:shadow-sky-500/50 transition-all duration-300 hover:scale-105"
               >
                 <svg
@@ -109,17 +107,8 @@ He is very excited to be your chair, and hopes to see you at Chirec.`,
                   />
                 </svg>
                 Download Background Guide (PDF)
-              </button>
+              </a>
             </div>
-
-            {/* Popup message */}
-            {showMessage && (
-              <div className="absolute inset-0 flex items-center justify-center bg-black/60 rounded-2xl backdrop-blur-md transition-opacity animate-fade-in">
-                <span className="text-sky-400 text-xl font-semibold">
-                  Coming Soon 🚀
-                </span>
-              </div>
-            )}
           </div>
         </div>
       </div>
