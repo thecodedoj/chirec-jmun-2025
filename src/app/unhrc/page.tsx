@@ -1,3 +1,6 @@
+"use client";
+
+import React, { useState } from "react";
 // app/committees/disec/page.tsx
 import Image from 'next/image';
 import logo from './unhrc.png';
@@ -6,6 +9,13 @@ import sanjaay from './yash.png';
 import aanyaJ from './anvit.png';
 
 export default function DISECPage() {
+  const [showMessage, setShowMessage] = useState(false);
+
+  const handleComingSoonClick = () => {
+    // ✅ show popup for 2.5 seconds
+    setShowMessage(true);
+    setTimeout(() => setShowMessage(false), 2500);
+  };
   const executiveBoard = [
     {
       name: 'Sarayu K',
@@ -64,7 +74,51 @@ politics. He is looking forward to his first time as a rapporteur at this Chirec
             <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-slide-up">
               United Nations Human Rights Council
             </p>
-            
+            {/* Background Guide Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="max-w-4xl mx-auto relative">
+          <div className="bg-gradient-to-r from-sky-500/10 to-blue-500/10 backdrop-blur-xl rounded-2xl p-8 border border-sky-400/20 shadow-xl">
+            <h2 className="text-3xl font-bold mb-4 text-sky-400 text-center">
+              Background Guide
+            </h2>
+            <p className="text-gray-300 mb-6 text-center">
+              Download the comprehensive background guide to prepare for the
+              committee session.
+            </p>
+            <div className="flex justify-center">
+              <button
+                onClick={handleComingSoonClick}
+                className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-sky-500 to-blue-600 rounded-xl font-semibold text-white shadow-lg hover:shadow-2xl hover:shadow-sky-500/50 transition-all duration-300 hover:scale-105"
+              >
+                <svg
+                  className="w-6 h-6 group-hover:animate-bounce"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
+                Download Background Guide (PDF)
+              </button>
+            </div>
+
+            {/* Popup message */}
+            {showMessage && (
+              <div className="absolute inset-0 flex items-center justify-center bg-black/60 rounded-2xl backdrop-blur-md transition-opacity animate-fade-in">
+                <span className="text-sky-400 text-xl font-semibold">
+                  Coming Soon 🚀
+                </span>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
             {/* Agenda Section */}
             <div className="max-w-4xl mx-auto">
               <div className="bg-gradient-to-r from-sky-500/10 to-blue-500/10 backdrop-blur-xl rounded-2xl p-8 border border-sky-400/20 shadow-xl animate-fade-in">
